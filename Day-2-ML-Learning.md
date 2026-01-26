@@ -44,11 +44,15 @@ df = pd.get_dummies(df, columns=['Color'], drop_first=True)
 
 📝 drop_first=True → prevents dummy variable trap
 
-🔧 2. Handling Missing Values
-Technique	Best For	Code Example
-Mean	Normal numeric	df['Age'].fillna(df['Age'].mean(), inplace=True)
-Median	Skewed numeric / Outliers	df['Income'].fillna(df['Income'].median(), inplace=True)
-Mode	Categorical	df['Gender'].fillna(df['Gender'].mode()[0], inplace=True)
+## 🔧 2. Handling Missing Values
+
+| Technique | Best For                     | Code Example                                                     |
+|-----------|-------------------------------|------------------------------------------------------------------|
+| Mean      | Normal numeric                | `df['Age'].fillna(df['Age'].mean(), inplace=True)`              |
+| Median    | Skewed numeric / Outliers     | `df['Income'].fillna(df['Income'].median(), inplace=True)`      |
+| Mode      | Categorical                   | `df['Gender'].fillna(df['Gender'].mode()[0], inplace=True)`     |
+
+
 ✂️ 3. Train–Test Split
 from sklearn.model_selection import train_test_split
 
@@ -125,16 +129,18 @@ from sklearn.preprocessing import MinMaxScaler
 scaler = MinMaxScaler()
 X_scaled = scaler.fit_transform(X)
 
-🏁 DAY 2 — Summary Table
-Topic	Why Use	Notes
-Label Encoding	Ordered labels	Converts text → numbers
-One Hot Encoding	Non-ordered labels	Avoid dummy trap
-Missing Values	Clean dataset	Mean / Median / Mode
-Train–Test Split	Unseen evaluation	test_size = 0.2
-MSE / RMSE	Error measurement	RMSE easiest
-MAE	Outlier safe	Absolute difference
-R² Score	Goodness of fit	Closer to 1 = good
-MLR	Multiple inputs	Linear relationship
-Polynomial Reg.	Non-linear curve	degree = 2/3
-Standardization	Gradient models	mean = 0
-Normalization	NN & bounded models	0–1 scaling
+## 🏁 DAY 2 — Summary Table
+
+| Topic                   | Why Use                 | Notes                          |
+|------------------------|--------------------------|--------------------------------|
+| Label Encoding         | Ordered labels           | Converts text → numbers        |
+| One Hot Encoding       | Non-ordered labels       | Avoid dummy trap               |
+| Missing Values         | Clean dataset            | Mean / Median / Mode           |
+| Train–Test Split       | Unseen evaluation        | test_size = 0.2                |
+| MSE / RMSE             | Error measurement        | RMSE easiest                   |
+| MAE                    | Outlier safe             | Absolute difference            |
+| R² Score               | Goodness of fit          | Closer to 1 = good             |
+| Multiple Linear Reg.   | Multiple inputs          | Linear relationship            |
+| Polynomial Regression  | Non-linear curve         | degree = 2/3                   |
+| Standardization        | Gradient models          | mean = 0                       |
+| Normalization          | NN & bounded models      | Scales 0–1                     |
