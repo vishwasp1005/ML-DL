@@ -87,6 +87,7 @@ r2 = r2_score(y_test, y_pred)
 🧮 5. Multiple Linear Regression
 
 📘 Formula  y=b0​+b1​x1​+b2​x2​+...+bn​xn​
+
 	​
 📌 Code
 from sklearn.linear_model import LinearRegression
@@ -100,6 +101,7 @@ y_pred = model.predict(X_test)
 📌 Used for non-linear relationships.
 
 ⚙️ Formula  y=b0​+b1​x+b2​x2+b3​x3+...
+
 
 📌 Code
 from sklearn.preprocessing import PolynomialFeatures
