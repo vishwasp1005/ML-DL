@@ -20,4 +20,4 @@ J = 1/2m Σ(y_pred - y_actual)^2
 
 ## Summary
 Strong understanding of ML fundamentals established.  
-Ready for Day 2: Multiple Linear Regression + Metrics.
+
