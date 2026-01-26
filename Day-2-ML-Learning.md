@@ -18,6 +18,7 @@ Data Preprocessing + Regression Models
 
 ✔ Feature Scaling
 
+
 🔥 1. Encoding Techniques
 <details> <summary><strong>🔹 Why Encoding? (Click to expand)</strong></summary>
 
@@ -44,6 +45,7 @@ df = pd.get_dummies(df, columns=['Color'], drop_first=True)
 
 📝 drop_first=True → prevents dummy variable trap
 
+
 ## 🔧 2. Handling Missing Values
 
 | Technique | Best For                     | Code Example                                                     |
@@ -51,6 +53,7 @@ df = pd.get_dummies(df, columns=['Color'], drop_first=True)
 | Mean      | Normal numeric                | `df['Age'].fillna(df['Age'].mean(), inplace=True)`              |
 | Median    | Skewed numeric / Outliers     | `df['Income'].fillna(df['Income'].median(), inplace=True)`      |
 | Mode      | Categorical                   | `df['Gender'].fillna(df['Gender'].mode()[0], inplace=True)`     |
+
 
 
 ✂️ 3. Train–Test Split
@@ -62,6 +65,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 
 🎯 Used to evaluate model performance on unseen data
+
 
 📊 4. Evaluation Metrics
 <details> <summary><strong>📉 Regression Metrics (Click to expand)</strong></summary>
@@ -86,9 +90,10 @@ r2 = r2_score(y_test, y_pred)
 </details>
 🧮 5. Multiple Linear Regression
 
+
 📘 Formula  y=b0​+b1​x1​+b2​x2​+...+bn​xn​
 
-	​
+​
 📌 Code
 from sklearn.linear_model import LinearRegression
 
@@ -98,9 +103,11 @@ y_pred = model.predict(X_test)
 
 🌀 6. Polynomial Regression
 
+
 📌 Used for non-linear relationships.
 
 ⚙️ Formula  y=b0​+b1​x+b2​x2+b3​x3+...
+
 
 
 📌 Code
@@ -112,6 +119,8 @@ X_poly = poly.fit_transform(X)
 model = LinearRegression()
 model.fit(X_poly, y)
 
+
+
 ⚡ 7. Feature Scaling
 ⭐ Standardization (Z-Score)
 
@@ -122,6 +131,7 @@ from sklearn.preprocessing import StandardScaler
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
+
 ⭐ Normalization (Min-Max)
 
 Scales between 0 and 1
@@ -130,6 +140,7 @@ from sklearn.preprocessing import MinMaxScaler
 
 scaler = MinMaxScaler()
 X_scaled = scaler.fit_transform(X)
+
 
 ## 🏁 DAY 2 — Summary Table
 
