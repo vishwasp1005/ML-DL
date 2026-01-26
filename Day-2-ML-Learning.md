@@ -1,22 +1,4 @@
-🚀 DAY 2 – Machine Learning 
-Data Preprocessing + Regression Models
-📚 Topics Covered
-
-✔ Label Encoding
-
-✔ One Hot Encoding
-
-✔ Handling Missing Values
-
-✔ Train–Test Split
-
-✔ Evaluation Metrics
-
-✔ Multiple Linear Regression
-
-✔ Polynomial Regression
-
-✔ Feature Scaling
+🚀 Day 2 Completed: Data Encoding, Missing Value Strategy, Model Evaluation Metrics, Regression Techniques, and Feature Scaling Implementation Notes.
 
 
 🔥 1. Encoding Techniques
