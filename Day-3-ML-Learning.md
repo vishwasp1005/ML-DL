@@ -78,5 +78,3 @@ Post-Pruning
 Grow full tree then cut branches (cost complexity pruning):
 
 ccp_alpha
-
-🧪 PYTHON IMPLEMENTATION
