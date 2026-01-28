@@ -13,11 +13,6 @@ So categorical features must be converted to numerical form.
 📌 Use when categories have rank/order
 (e.g., Low < Medium < High)
 
-from sklearn.preprocessing import LabelEncoder
-
-le = LabelEncoder()
-df['Education'] = le.fit_transform(df['Education'])
-
 ⭐ ② One Hot Encoding (Non-Ordered Categories)
 
 📌 Use when categories have no order
@@ -52,21 +47,11 @@ X_train, X_test, y_train, y_test = train_test_split(
 📊 4. Evaluation Metrics
 <details> <summary><strong>📉 Regression Metrics (Click to expand)</strong></summary>
 MSE – Mean Squared Error
-from sklearn.metrics import mean_squared_error
-mse = mean_squared_error(y_test, y_pred)
-
 RMSE – Root MSE
 rmse = mse ** 0.5
-
 MAE – Mean Absolute Error
-from sklearn.metrics import mean_absolute_error
-mae = mean_absolute_error(y_test, y_pred)
-
 R² Score
-from sklearn.metrics import r2_score
-r2 = r2_score(y_test, y_pred)
-
-
+    
 💡 Higher R² = Better model
 
 </details>
@@ -75,54 +60,20 @@ r2 = r2_score(y_test, y_pred)
 
 📘 Formula  y=b0​+b1​x1​+b2​x2​+...+bn​xn​
 
-​
-📌 Code
-from sklearn.linear_model import LinearRegression
-
-model = LinearRegression()
-model.fit(X_train, y_train)
-y_pred = model.predict(X_test)
-
 🌀 6. Polynomial Regression
-
 
 📌 Used for non-linear relationships.
 
 ⚙️ Formula  y=b0​+b1​x+b2​x2+b3​x3+...
-
-
-
-📌 Code
-from sklearn.preprocessing import PolynomialFeatures
-
-poly = PolynomialFeatures(degree=2)
-X_poly = poly.fit_transform(X)
-
-model = LinearRegression()
-model.fit(X_poly, y)
-
-
 
 ⚡ 7. Feature Scaling
 ⭐ Standardization (Z-Score)
 
 Used in: SVM, Logistic Regression, KNN, Neural Networks
 
-from sklearn.preprocessing import StandardScaler
-
-scaler = StandardScaler()
-X_scaled = scaler.fit_transform(X)
-
-
 ⭐ Normalization (Min-Max)
 
 Scales between 0 and 1
-
-from sklearn.preprocessing import MinMaxScaler
-
-scaler = MinMaxScaler()
-X_scaled = scaler.fit_transform(X)
-
 
 ## 🏁 DAY 2 — Summary Table
 
