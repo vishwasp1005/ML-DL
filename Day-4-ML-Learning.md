@@ -46,6 +46,7 @@ Non-parametric algorithm
 1. Euclidean Distance (Default)
 
 d=(x1​−y1​)2+(x2​−y2​)2+...
+
 ​
 2. Manhattan Distance
 
