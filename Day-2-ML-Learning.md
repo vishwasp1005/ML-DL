@@ -48,10 +48,15 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 📊 4. Evaluation Metrics
 <details> <summary><strong>📉 Regression Metrics (Click to expand)</strong></summary>
+    
 MSE – Mean Squared Error
+
 RMSE – Root MSE
+
 rmse = mse ** 0.5
+
 MAE – Mean Absolute Error
+
 R² Score
     
 💡 Higher R² = Better model
