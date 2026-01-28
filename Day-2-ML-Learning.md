@@ -34,6 +34,8 @@ df = pd.get_dummies(df, columns=['Color'], drop_first=True)
 
 
 ✂️ 3. Train–Test Split
+
+
 from sklearn.model_selection import train_test_split
 
 X_train, X_test, y_train, y_test = train_test_split(
