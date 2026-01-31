@@ -63,7 +63,7 @@ AUC Score	Model Quality
 
 0.8–0.9	Very Good
 
->0.9	Excellent
+ >0.9	Excellent
 
 
 🟩 4️⃣ CROSS VALIDATION (Very Important)
