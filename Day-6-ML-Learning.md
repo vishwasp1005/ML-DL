@@ -17,9 +17,6 @@ FP → False alarm
 
 FN → Missed positive
 
-from sklearn.metrics import confusion_matrix
-cm = confusion_matrix(y_test, y_pred)
-print(cm)
 
 🟪 2️⃣ PRECISION, RECALL & F1 SCORE
 🔹 Precision
