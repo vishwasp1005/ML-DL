@@ -1,0 +1,86 @@
+DAY 6 — MODEL EVALUATION & HYPERPARAMETER TUNING
+🟧 1️⃣ CONFUSION MATRIX (Base of Everything)
+
+A table to evaluate classification models.
+
+         	Predicted 0	Predicted 1
+Actual 0     	TN           FP
+Actual 1     	FN	         TP
+
+TP → Correct positive
+
+TN → Correct negative
+
+FP → False alarm
+
+FN → Missed positive
+
+from sklearn.metrics import confusion_matrix
+cm = confusion_matrix(y_test, y_pred)
+print(cm)
+
+🟪 2️⃣ PRECISION, RECALL & F1 SCORE
+🔹 Precision
+
+Out of predicted positives, how many are correct?
+
+
+Precision=TP+FPTP​
+	​
+
+
+Use when false positives are costly (spam detection).
+
+🔹 Recall
+
+Out of actual positives, how many did we catch?
+
+
+Recall=TP+FNTP​​
+
+
+Use when false negatives are costly (disease detection).
+
+🔹 F1 Score
+
+Balance between Precision & Recall
+
+
+F1=
+Precision+Recall
+2×Precision×Recall
+	​
+
+🔵 3️⃣ ROC CURVE & AUC SCORE
+
+ROC Curve → TPR vs FPR
+
+AUC → Area under ROC curve
+
+AUC Score	Model Quality
+0.5	Random
+0.7–0.8	Good
+0.8–0.9	Very Good
+>0.9	Excellent
+
+
+🟩 4️⃣ CROSS VALIDATION (Very Important)
+
+Instead of single train-test split, we train model multiple times.
+
+
+✔ More reliable accuracy
+✔ Reduces overfitting
+
+
+🟨 5️⃣ GRIDSEARCH CV (Hyperparameter Tuning)
+
+Automatically finds best parameters.
+
+
+
+print(grid.best_params_)
+
+
+✔ Improves performance
+✔ Interview favorite topic
