@@ -1,11 +1,13 @@
 DAY 6 — MODEL EVALUATION & HYPERPARAMETER TUNING
 🟧 1️⃣ CONFUSION MATRIX (Base of Everything)
 
-A table to evaluate classification models.
 
-         	Predicted 0	Predicted 1
-Actual 0     	TN           FP
-Actual 1     	FN	         TP
+                  predicted 0     predicted 1 
+				  
+	actual 0         TN               FN
+
+	actual 1         FP               TP
+
 
 TP → Correct positive
 
@@ -46,9 +48,7 @@ Use when false negatives are costly (disease detection).
 Balance between Precision & Recall
 
 
-F1=
-Precision+Recall
-2×Precision×Recall
+F1=   2×Precision×Recall / Precision+Recall
 	​
 
 🔵 3️⃣ ROC CURVE & AUC SCORE
@@ -58,9 +58,14 @@ ROC Curve → TPR vs FPR
 AUC → Area under ROC curve
 
 AUC Score	Model Quality
+
+
 0.5	Random
+
 0.7–0.8	Good
+
 0.8–0.9	Very Good
+
 >0.9	Excellent
 
 
@@ -77,10 +82,5 @@ Instead of single train-test split, we train model multiple times.
 
 Automatically finds best parameters.
 
-
-
-print(grid.best_params_)
-
-
 ✔ Improves performance
-✔ Interview favorite topic
+
